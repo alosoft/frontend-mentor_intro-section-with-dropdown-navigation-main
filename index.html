@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <header class="header">
+      <img src="./images/logo.svg" alt="logo" class="header__logo">
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-list__item">
+            <a href="#features" class="header__nav-list__item-link dropdown">Features</a>
+            <ul class="dropdown__container">
+              <li class="dropdown__container-item"><img src="./images/icon-todo.svg" alt="todo" class="dropdown__container-item__img"><a href="#todo" class="dropdown__container-item__link">Todo List</a></li>
+              <li class="dropdown__container-item"><img src="./images/icon-calendar.svg" alt="calender" class="dropdown__container-item__img"><a href="#calendar" class="dropdown__container-item__link">Calendar</a></li>
+              <li class="dropdown__container-item"><img src="./images/icon-reminders.svg" alt="reminders" class="dropdown__container-item__img"><a href="#reminders" class="dropdown__container-item__link">Reminders</a></li>
+              <li class="dropdown__container-item"><img src="./images/icon-planning.svg" alt="planning" class="dropdown__container-item__img"><a href="#planning" class="dropdown__container-item__link">Planning</a></li>
+            </ul>
+          </li>
+          <li class="header__nav-list__item">
+            <a href="#company" class="header__nav-list__item-link dropdown">Company</a>
+            <ul class="dropdown__container">
+              <li class="dropdown__container-item"><a href="#calendar" class="dropdown__container-item__link">History</a></li>
+              <li class="dropdown__container-item"><a href="#reminders" class="dropdown__container-item__link">Our Team</a></li>
+              <li class="dropdown__container-item"><a href="#planning" class="dropdown__container-item__link">Blog</a></li>
+            </ul>
+          </li>
+          <li class="header__nav-list__item"><a href="#careers" class="header__nav-list__item-link">Careers</a></li>
+          <li class="header__nav-list__item"><a href="#about" class="header__nav-list__item-link">About</a></li>
+        </ul>
+        <div class="header__nav-mobile">
+          <img src="./images/icon-close-menu.svg" alt="icon-menu" class="header__nav-mobile__close">
+        </div>
+      </nav>
+      <img src="./images/icon-menu.svg" alt="icon-menu" class="header__mobile">
+      <div class="header__auth">
+        <a href="#login" class="header__auth-login">Login</a>
+        <a href="#register" class="header__auth-register">Register</a></div>
+    </header>
+    <main class="landing">
+      <div class="landing__welcome">
+        <div class="landing__welcome-action">
+          <h1 class="landing__welcome-action__caption">Make remote work</h1>
+          <p class="landing__welcome-action__msg">
+            Get your team in sync, no matter your location. Streamline processes,
+            create team rituals, and watch productivity soar.
+          </p>
+          <a href="#learn_more" class="landing__welcome-action__cta">Learn more</a>
+        </div>
+        <div class="landing__welcome-sponsors">
+          <img src="./images/client-databiz.svg" alt="databiz">
+          <img src="./images/client-audiophile.svg" alt="audiophile">
+          <img src="./images/client-meet.svg" alt="client-meet">
+          <img src="./images/client-maker.svg" alt="client-maker">
+        </div>
+      </div>
+      <div  class="landing__illustration">
+        <img class="landing__illustration-img" src="./images/image-hero-desktop.png" alt="landing__illustration">
+        </div>
+    </main>
+
+
+    <script src="script.js"></script>
+  </body>
+
+</html>
