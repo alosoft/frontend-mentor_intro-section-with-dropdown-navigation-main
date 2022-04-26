@@ -202,7 +202,7 @@
 }
 
 .landing__illustration {
-    flex: .5;
+    flex: .65;
     height: 100%;
     display: flex;
     align-items: flex-end;
