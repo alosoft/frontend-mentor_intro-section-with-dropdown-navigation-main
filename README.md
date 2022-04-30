@@ -55,6 +55,25 @@ I used the same technique to change the arrow icon on hover
     content: url(./images/icon-arrow-up.svg);
 }
 ```
+I found out the style for displaying the dropdown on the desktop was not working properly on mobile so it needed to be disabled on mobile. After doing some research I discovered I could write media queries for specific device attributes include checking if user has a pointing device or touch device as well as checking if the primary input of the device can hover on elements.
+
+```css
+@media (hover: hover) and (pointer: fine) {
+    .header__nav-list__item:hover .dropdown__container {
+        display: flex;
+    }
+
+    .header__nav-list__item:hover .dropdown::after {
+        animation-name: rotate_arrow;
+        animation-duration: .5s;
+        animation-fill-mode: both;
+    }
+}
+```
+
+References: 
+- [Media Query for Hover](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/hover)
+- [Media Query for Pointer](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/pointer)
 
 
 ## Author
