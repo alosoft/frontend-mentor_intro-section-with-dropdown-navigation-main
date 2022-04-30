@@ -13,6 +13,7 @@
     padding: 0;
     margin: 0;
     font-family: var(--font-family);
+    transition: all ease 1s;
 }
 
 .header {
@@ -88,8 +89,16 @@
     position: relative;
 }
 
+@keyframes rotate_arrow {
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
 .header__nav-list__item:hover .dropdown::after {
-    content: url(./images/icon-arrow-up.svg);
+    animation-name: rotate_arrow;
+    animation-duration: .5s;
+    animation-fill-mode: both;
 }
 
 @keyframes slide-in {
@@ -144,16 +153,15 @@
     width: 100%;
     height: calc(100vh - 5.36125rem);
     display: flex;
-    align-items: center;
-    padding: 4rem 12%;
+    align-items: flex-end;
+    padding: 0 12% 2rem;
 }
 
 .landing__welcome {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    gap: 4.5rem;
+    justify-content: flex-end;
     height: 100%;
 }
 
@@ -168,12 +176,12 @@
 
 .landing__welcome-action__caption {
     font-size: 4rem;
-    width: 65%;
+    max-width: 27rem;
     color: var(--almost-black);
 }
 
 .landing__welcome-action__msg {
-    width: 60%;
+    max-width: 26rem;
     line-height: 1.5rem;
     color: var(--medium-gray);
 }
@@ -182,7 +190,7 @@
     color: var(--almost-white);
     background: var(--almost-black);
     text-decoration: none;
-    padding: 1rem 1rem;
+    padding: .7rem 1rem;
     border-radius: .7rem;
     border: .2rem solid transparent;
 }
@@ -203,9 +211,12 @@
 
 .landing__illustration {
     flex: .65;
-    height: 100%;
+    height: calc(100% - 2rem);
     display: flex;
     align-items: flex-end;
+    background: url(./images/image-hero-desktop.png) no-repeat center;
+    background-size: contain;
+    width: 100%;
 }
 
 .landing__illustration-img {
@@ -294,8 +305,9 @@
         height: calc(100vh - 4.6875rem);
     }
 
-    .landing__illustration-img {
-        content: url(./images/image-hero-mobile.png)
+    .landing__illustration {
+        background-image: url(./images/image-hero-mobile.png);
+        height: 100%
     }
 
     .landing__welcome {
