@@ -69,6 +69,10 @@ I found out the style for displaying the dropdown on the desktop was not working
         animation-fill-mode: both;
     }
 }
+
+.header__nav-list__item:hover .dropdown::after {
+    content: url(./images/icon-arrow-up.svg);
+}
 ```
 
 References: 

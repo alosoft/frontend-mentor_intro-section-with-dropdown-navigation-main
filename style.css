@@ -283,9 +283,19 @@
         padding: 1.5rem;
     }
 
-    @keyframes slide_menu {
+    @keyframes slide_menu_in {
         100% {
             width: 65%;
+        }
+    }
+
+    @keyframes slide_menu_out {
+        0% {
+            width: 65%;
+        }
+
+        100% {
+            width: -20%;
         }
     }
 
@@ -301,7 +311,7 @@
 
     .header__nav-mobile,
     .header__nav-list {
-        animation-name: slide_menu;
+        animation-name: slide_menu_in;
         animation-duration: .5s;
         animation-fill-mode: both;
     }
